@@ -1,0 +1,191 @@
+/* Estilos generales */
+body {
+font-family: 'Arial', sans-serif;
+    background: url('https://raw.githubusercontent.com/CumpleDulce/Calendario-/main/IMG-20250202-WA0017.jpg') ;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+    
+
+/* Contenedor del calendario */
+#calendario {
+    display: flex;
+    flex-direction: column; /* Apila los días uno debajo del otro */
+    gap: 15px;
+    width: 90%;
+    max-width: 500px; /* Hace que no sea demasiado ancho */
+    margin: 0 auto;
+    overflow-y: auto; /* Activa scroll si hay muchos días */
+    max-height: 80vh; /* Altura máxima relativa a la pantalla */
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Contenedor del calendario */
+#calendario {
+    display: flex;
+    flex-direction: column; /* Apila los días uno debajo del otro */
+    gap: 20px; /* Más espacio entre los días */
+    width: 90%;
+    max-width: 550px; /* Un poco más grande */
+    margin: 0 auto;
+    overflow-y: auto; /* Activa scroll si hay muchos días */
+    max-height: 85vh; /* Más espacio en la pantalla */
+    padding: 15px;
+    border-radius: 10px;
+    background: #ffffff80;
+}
+
+/* Estilo de cada día (caja) */
+.caja {
+    padding: 30px; /* Más grande */
+    font-size: 24px; /* Texto más grande */
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más notoria */
+}
+.caja:nth-child(1) { background: #ffb6c1; }  /* Día 1 - Rosa pastel */
+.caja:nth-child(2) { background: #add8e6; }  /* Día 2 - Azul pastel */
+.caja:nth-child(3) { background: #98fb98; }  /* Día 3 - Verde pastel */
+.caja:nth-child(4) { background: #ffd700; }  /* Día 4 - Amarillo pastel */
+.caja:nth-child(5) { background: #dda0dd; }  /* Día 5 - Lila pastel */
+.caja:nth-child(6) { background: #f4a460; }  /* Día 6 - Durazno pastel */
+.caja:nth-child(7) { background: #87ceeb; }  /* Día 7 - Celeste pastel */
+.caja:nth-child(8) { background: #ffdab9; }  /* Día 8 - Melón pastel */
+.caja:nth-child(9) { background: #b0e0e6; }  /* Día 9 - Turquesa pastel */
+.caja:nth-child(10) { background: #fa8072; }  /* Día 10 - Coral pastel */
+.caja:nth-child(11) { background: #e6e6fa; }  /* Día 11 - Lavanda */
+.caja:nth-child(12) { background: #ffc0cb; }  /* Día 12 - Rosa claro */
+.caja:nth-child(13) { background: #f0e68c; }  /* Día 13 - Amarillo suave */
+.caja:nth-child(14) { background: #afeeee; }  /* Día 14 - Azul claro */
+.caja:nth-child(15) { background: #db7093; }  /* Día 15 - Rosa fuerte */
+.caja:nth-child(16) { background: #ffcccb; }  /* Día 16 - Rojo suave */
+.caja:nth-child(17) { background: #20b2aa; }  /* Día 17 - Verde azulado */
+.caja:nth-child(18) { background: #f5deb3; }  /* Día 18 - Beige */
+.caja:nth-child(19) { background: #d8bfd8; }  /* Día 19 - Malva */
+.caja:nth-child(20) { background: #ffe4e1; }  /* Día 20 - Rosa empolvado */
+.caja:nth-child(21) { background: #7fffd4; }  /* Día 21 - Verde agua */
+.caja:nth-child(22) { background: #ffb6c1; }  /* Día 22 - Rosa pastel */
+.caja:nth-child(23) { background: #add8e6; }  /* Día 23 - Azul pastel */
+.caja:nth-child(24) { background: #98fb98; }  /* Día 24 - Verde pastel */
+.caja:nth-child(25) { background: #ffd700; }  /* Día 25 - Amarillo pastel */
+.caja:nth-child(26) { background: #dda0dd; }  /* Día 26 - Lila pastel */
+.caja:nth-child(27) { background: #f4a460; }  /* Día 27 - Durazno pastel */
+.caja:nth-child(28) { background: #87ceeb; }  /* Día 28 - Celeste pastel */
+.caja:nth-child(29) { background: #ffdab9; }  /* Día 29 - Melón pastel */
+.caja:nth-child(30) { background: #ffd700; }  /* Día 29 - Melón pastel */
+/* Día 30 - Color especial llamativo */
+.caja:nth-child(31) { 
+    background: linear-gradient(45deg, #ff4500, #ffcc00); /* Degradado llamativo */
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* Animación al pasar el mouse */
+.caja:hover {
+    transform: scale(1.08);
+}
+
+/* Estilo de las casillas bloqueadas */
+.caja.bloqueado {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* Estilo del modal */
+/* 🔷 Fondo del modal (oscurece el fondo cuando se abre) */
+/* 🔷 Fondo del modal (oscurece el fondo cuando se abre) */
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;  /* Más grande */
+    max-width: 600px; /* Más amplio */
+    background: white;
+    padding: 30px; /* Más espacio interno */
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Contenedor del contenido del modal */
+#modal-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: aparecer 0.3s ease-in-out;
+}
+
+/* 🔹 Versículo */
+#versiculo {
+    font-size: 24px;  /* Más grande */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;  /* Más espacio debajo */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* 🔹 Explicación (texto adicional) */
+#explicacion {
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    margin-top: 25px;  /* Separado del versículo */
+    line-height: 1.6;  /* Espaciado entre líneas */
+}
+
+/* 🔹 Botón de cierre */
+#cerrar-modal {
+    background: #ff6961;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+#cerrar-modal:hover {
+    background: #ff3b30;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 📱 Ajuste para móviles */
+@media (max-width: 600px) {
+    #modal {
+        width: 90%;
+        max-width: 90%;
+        padding: 20px;
+    }
+    #versiculo {
+        font-size: 20px;
+    }
+    #explicacion {
+        font-size: 16px;
+    }
+    #cerrar-modal {
+        font-size: 14px;
+    }
+}
